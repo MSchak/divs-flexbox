@@ -108,26 +108,79 @@ body {
   padding: 2em;
   font-size: 1.4em;
   height: 100%;
-  background-color: #1F1E1E;
+  background-color: white;
 }
 
 .wrapper {
-  /*add display:flex and set justify-content to space-between*/
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
+}
+
+header, main, .footer{
+  line-height: 1.5em;
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: white;
+}
+
+header{
+  justify-content: center;
+  background: url('../img/desk.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50%;
+}
+
+h1{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2.2em;
+  line-height: 1em;
+}
+
+main{
+  background-color: #FAC3D1;
+  padding: 2em .5em;
+  height: auto;
 }
 
 .div-1, .div-2, .div-3 {
-  /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
-  color: #fff;
+  color: black;
   line-height: 1.5em;
   font-size: 1em;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  background-color:white;
+  padding: 0 .5em;
+  color: darkgrey;
+}
+
+.div-1, .div-2{
+border-bottom: 2px lightgrey solid;
+}
+
+
+.footer{
+  background-color: #AAE6FA;
+}
+
+.footer a{
+  text-decoration: none;
+}
+
+.footer img{
+  height: 2em;
+  width: 2em;
+  padding-bottom: 4px;
 }
 
 /* ==========================================================================
@@ -210,16 +263,32 @@ body {
    Modify as content requires.
    ========================================================================== */
 
+@media (min-width: 786px){
+
+        h1{
+           font-size: 4.5em;
+         }
+
 @media all and (min-width: 1200px) {
-       .div-1, .div-2, .div-3 {
+
+        .div-1, .div-2, .div-3 {
          flex-basis: 30%;
-       }
+        }
 
 @media (min-width: 1200px){
-     .div-2, .div-3{
-       border-left: .1em lightgrey solid;
-       padding-left: 2em;
-     }
+
+      h1{
+        font-size: 5.5em;
+      }
+
+      main{
+        padding: 2em 4em;
+      }
+
+      .div-1, .div-2{
+      border-bottom: none;
+      }
+}
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
